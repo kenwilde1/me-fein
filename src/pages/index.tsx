@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      Coming soon...
+      do you know i love ya?
     </>
   );
 }
