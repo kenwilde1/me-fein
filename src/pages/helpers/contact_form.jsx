@@ -1,18 +1,13 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-export const ContactForm = () => {
+export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
   const sendEmail = (e) => {
-    console.log('sending email');
-    console.log(process.env);
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
-    console.log(process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
-      process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID,
-      process.env.NEXT_PUBLIC_REACT_APP_PUBLIC_KEY);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
