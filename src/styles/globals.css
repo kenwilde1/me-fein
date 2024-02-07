@@ -1,0 +1,298 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "https://unpkg.com/open-props/easings.min.css";
+
+body {
+    background: #FFFAF7;
+    height: 100vh;
+}
+
+#main {
+    height: 100vh;
+}
+
+#navbar {
+    height: 12vh;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+}
+
+#navbar-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#navbar-content ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-size: 1.2rem;
+    color: black;
+}
+
+ul a {
+    padding: 5px 10px;
+    border-radius: 18px;
+}
+
+.active-page {
+    color: #D04848;
+    transition: 0.4s ease all;
+}
+
+ul a:hover {
+    color: #D04848;
+}
+
+ul .active-page:hover {
+    color: #D04848;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#logo:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.toggle-theme div,
+.socials div {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.hero-left {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.hero-left h1 span {
+    color: #D04848;
+}
+
+.hero-left a {
+    color: #D04848;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 30%;
+}
+
+.hero-left a:hover {
+    color: #6895D2;
+}
+
+.hero-right img {
+    width: 40vw;
+}
+
+#hero div {
+    height: 50vh;
+}
+
+html:not([data-scroll='0']) nav {
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    transition: 0.5s ease all;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+#divider {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    bottom: -40px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background: #FFFAF7;
+    border-radius: 50%;
+    bottom: -40px;
+    ;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    z-index: 2;
+}
+
+.arrow {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    bottom: -15px;
+}
+
+svg {
+    color: #6895D2
+}
+
+#about {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    gap: 10px;
+    text-align: left;
+    width: 60vw;
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.about-content a {
+    font-weight: 800;
+}
+
+.about-content a:hover {
+    color: #6895D2;
+    text-decoration: underline;
+}
+
+.about-two {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin-top: 50px;
+}
+
+.about-two-content {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    gap: 50px;
+}
+
+.skills,
+.certs {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+
+    p {
+        font-weight: 400;
+    }
+}
+
+.skills,
+.certs h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    padding: 5px 10px;
+    background: rgba(153, 153, 153, .2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #666;
+    width: min-content;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.skill-card:hover {
+    transform: scale(1.2);
+}
+
+.skill-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+
+.card-item-div {
+    transition: all 0.2s;
+    margin-top: 0;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 400px;
+    background: rgba(153, 153, 153, .2);
+}
+
+.card-item-div:hover {
+    background: #6895D2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.card-item-div a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.about-three {
+    display: flex;
+    border: 1px solid black;
+    height: 50vh;
+    width: 60vw;
+    margin-bottom: 100px;
+}
