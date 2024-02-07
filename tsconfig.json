@@ -17,6 +17,6 @@
     },
     "allowImportingTsExtensions": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/helpers/contact_form.jsx"],
   "exclude": ["node_modules"]
 }
