@@ -1,4 +1,4 @@
-import { ContactForm } from "./helpers/contact_form";
+import ContactForm from "./helpers/contact_form";
 
 export default function Contact() {
   return (
