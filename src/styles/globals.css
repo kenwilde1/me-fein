@@ -21,15 +21,24 @@ html:not([data-scroll='0']) nav {
     backdrop-filter: blur(10px);
 }
 
-.about-content, .about-two, .about-two-content, .about-three, .about-three-content > div {
+.about-content,
+.about-two,
+.about-two-content,
+.about-three {
     width: 60vw;
 }
 
-.skills, .certs {
+.about-three-content>div {
+    width: 80vw;
+}
+
+.skills,
+.certs {
     width: 30vw;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     z-index: 9999;
 }
 
@@ -62,4 +71,12 @@ html:not([data-scroll='0']) nav {
 #contact form {
     width: 60vw;
     min-height: 100px;
+}
+
+@media (max-width: 1000px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
 }

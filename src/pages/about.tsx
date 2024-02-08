@@ -94,13 +94,12 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="about-three h-screen/60 flex mb-24 justify-center flex-col items-center">
-          <h1 className="text-3xl mt-24 md:mt-2 md:text-5xl font-extrabold">
+        <div className="about-three flex mb-24 justify-center flex-col items-center">
+          <h1 className="text-3xl mt-24 md:text-5xl font-extrabold">
             Some nice words
           </h1>
           <div className="about-three-content">
             <Swiper
-              // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={20}
               slidesPerView={1}
@@ -114,7 +113,7 @@ export default function About() {
                   <h3 className="text-blue-500 mb-12">
                     Senior Software Engineer at Fidelity
                   </h3>
-                  <p>
+                  <p className='w-screen/80'>
                     <span>"</span>I worked with Kenny for two and a half years,
                     when he started in the company as a Junior Engineer (I was
                     mid-level). Kenny's approach and attitude is what you look
@@ -130,7 +129,7 @@ export default function About() {
                   <h3 className="text-blue-500 mb-12">
                     Software Engineer at Siren
                   </h3>
-                  <p>
+                  <p className='w-screen/80'>
                     <span>"</span>Kenny is an invaluable asset to any
                     JavaScript/Node.js development team. His expertise,
                     problem-solving skills, and collaborative spirit make them

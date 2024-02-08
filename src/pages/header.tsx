@@ -15,14 +15,14 @@ export default function Header(): JSX.Element {
             contact
           </Link>
         </ul>
-        <div className="hidden md:block md:flex md:items-center">
+        {/* <div className="hidden md:block md:flex md:items-center">
           <div className="h-8 w-8 border border-sky-500"></div>
         </div>
         <div className="hidden md:block md:flex md:items-center md:gap-8">
           <div className="h-8 w-8 border border-sky-500"></div>
           <div className="h-8 w-8 border border-sky-500"></div>
           <div className="h-8 w-8 border border-sky-500"></div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
