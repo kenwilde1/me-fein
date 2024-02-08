@@ -37,14 +37,14 @@ export default function ContactForm() {
     e.target.reset();
   };
   return (
-    <form onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Your message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" disabled={isSubmitting} />
+    <form onSubmit={sendEmail} className="flex flex-col text-2xl">
+      <label className="p-4">Name</label>
+      <input className='border border-solid border-slate-500 rounded' type="text" name="user_name" />
+      <label className="p-4">Email</label>
+      <input className='border border-solid border-slate-500 rounded' type="email" name="user_email" />
+      <label className="p-4">Your message</label>
+      <textarea className='border border-solid border-slate-500 rounded' name="message" />
+      <input className='mt-10 w-24 text-center self-center text-rose-500 hover:text-blue-500 cursor-pointer' type="submit" value="Send" disabled={isSubmitting} />
       {stateMessage && <p>{stateMessage}</p>}
     </form>
   );

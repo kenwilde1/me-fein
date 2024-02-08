@@ -2,7 +2,6 @@ import { Source_Code_Pro } from "next/font/google";
 import Hero from "./hero";
 import About from "./about";
 import { useEffect } from "react";
-import Divider from "./helpers/divider";
 import Contact from "./contact";
 
 const sourceCodePro = Source_Code_Pro({
@@ -18,9 +17,11 @@ export default function Body(): JSX.Element {
   }, []);
 
   return (
-    <div id="main" className={`${sourceCodePro.className}`}>
+    <div
+      id="main"
+      className={`text-center md:text-left ${sourceCodePro.className}`}
+    >
       <Hero />
-      <Divider />
       <About />
       <Contact />
     </div>

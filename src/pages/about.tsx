@@ -22,9 +22,11 @@ export default function About() {
   const certs = ["Elasticsearch Certified Engineer", "Scrum Master"];
 
   return (
-    <div id="about">
-      <div className="about-content">
-        <h1>A little about me</h1>
+    <div id="about" className="bg-slate-50 flex justify-center">
+      <div className="about-content text-center md:text-left flex flex-col items-center pb-24 gap-2.5 text-left">
+        <h1 className="text-4xl md:text-7xl font-extrabold mt-24 mb-6">
+          A little about me
+        </h1>
         <p>
           I've been working as a professional Software Engineer for almost 3
           years but I've been building web applications for almost 9 years now.
@@ -33,37 +35,53 @@ export default function About() {
           cycle though, with new tools, ideas and libraries coming out every
           year, I like to challenge myself in learning something new. So I
           decided to build this website with{" "}
-          <a href="https://nextjs.org/" target="_blank">
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            className="font-extrabold hover:text-blue-500"
+          >
             NextJS
           </a>{" "}
           and deploy it on{" "}
-          <a href="https://vercel.com/" target="_blank">
+          <a
+            href="https://vercel.com/"
+            target="_blank"
+            className="font-extrabold hover:text-blue-500"
+          >
             Vercel.
           </a>
         </p>
-        <div className="about-two">
-          <div className="about-two-content">
-            <div className="skills">
-              <h2>What I use to code</h2>
-              <div className="skill-list">
+        <div className="flex justify-between mt-12">
+          <div className="flex justify-between gap-2.5 about-two-content">
+            <div className="flex flex-col">
+              <h2 className="font-extrabold mb-5 text-base">
+                What I use to code
+              </h2>
+              <div className="flex justify-center md:justify-start flex-wrap gap-2.5 mb-8 skill-list">
                 {skills.map((skill) => (
                   <SkillCard skillName={skill} />
                 ))}
               </div>
-              <h2>What I use to store and retrieve data</h2>
-              <div className="skill-list">
+              <h2 className="font-extrabold mb-5 text-base">
+                What I use to store and retrieve data
+              </h2>
+              <div className="flex justify-center md:justify-start  flex-wrap gap-2.5 mb-8 skill-list">
                 {storeDataSkills.map((skill) => (
                   <SkillCard skillName={skill} />
                 ))}
               </div>
-              <h2>What helps me tie it together</h2>
-              <div className="skill-list">
+              <h2 className="font-extrabold mb-5 text-base">
+                What helps me tie it together
+              </h2>
+              <div className="flex justify-center md:justify-start  flex-wrap gap-2.5 mb-8 skill-list">
                 {otherTools.map((skill) => (
                   <SkillCard skillName={skill} />
                 ))}
               </div>
-              <h2>I'm also certified</h2>
-              <div className="skill-list">
+              <h2 className="font-extrabold mb-5 text-base">
+                I'm also certified
+              </h2>
+              <div className="flex justify-center md:justify-start  flex-wrap gap-2.5 mb-8 skill-list">
                 {certs.map((skill) => (
                   <SkillCard skillName={skill} />
                 ))}
@@ -76,8 +94,10 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="about-three">
-          <h1>Some nice words</h1>
+        <div className="about-three h-screen/60 flex mb-24 justify-center flex-col items-center">
+          <h1 className="text-3xl mt-24 md:mt-2 md:text-5xl font-extrabold">
+            Some nice words
+          </h1>
           <div className="about-three-content">
             <Swiper
               // install Swiper modules
@@ -91,7 +111,7 @@ export default function About() {
               <SwiperSlide>
                 <div className="slider-content">
                   <h2>Edwin Corrigan</h2>
-                  <h3 className="title">
+                  <h3 className="text-blue-500 mb-12">
                     Senior Software Engineer at Fidelity
                   </h3>
                   <p>
@@ -107,7 +127,9 @@ export default function About() {
               <SwiperSlide>
                 <div className="slider-content">
                   <h2>Philip Hankey</h2>
-                  <h3 className="title">Software Engineer at Siren</h3>
+                  <h3 className="text-blue-500 mb-12">
+                    Software Engineer at Siren
+                  </h3>
                   <p>
                     <span>"</span>Kenny is an invaluable asset to any
                     JavaScript/Node.js development team. His expertise,

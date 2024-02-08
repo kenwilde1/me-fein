@@ -3,11 +3,21 @@ module.exports = {
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
     "./src/**/*.{js,jsx,ts,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   plugins: [
-    require("flowbite/plugin"),
     require("tailwind-extended-shadows")
   ],
-  theme: {},
+  theme: {
+    extend: {
+      height: {
+        'screen/60': '60vh',
+        'screen/50': '50vh'
+      },
+      width: {
+        'screen/60': '60vw',
+        'screen/40': '40vw',
+        'screen/80': '80vw'
+      }
+    }
+  },
 };
